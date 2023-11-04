@@ -1,25 +1,4 @@
 InUi = false
-Config = {}
-Config.startamount = 10
-Config.Percent = 400
-
-RegisterCommand('skills2', function(source, args, rawCommand)
-    local startamount = Config.startamount
-    local Percent = Config.Percent
-    local thelevel = exports['skillpojt']:CheckLevel("DRUG COLLECTING", function(thelevel)
-        if thelevel then
-            local unit = math.max(1, math.min(10, thelevel))
-            local percentageIncrease = (unit - 1) / 9 * Percent
-            local increasedAmount = math.ceil(startamount + (startamount * percentageIncrease / 100))
-            print("Your level: " .. thelevel .. " Out of 10")
-            print("Start amount:" ..startamount)
-            print("+ Percent: " .. percentageIncrease .. "%")
-            print("New amount: " .. increasedAmount)
-        end
-    end)
-end)
-
-
 CheckLevel = function(skill, callback)
     Callbacks.TriggerServerCallback("Rovelt_GetIdentifier", function(info)
         local thelevel = nil
