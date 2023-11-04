@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="skill-container" visibility: hidden>
+        <div class="top-container">
+            <span class="close-button">&#10006;</span>
+            <p>Skill Points: <span id="skillPoints">0</span></p>
+        </div>
+        <div class="skill-rows">
+            <div class="skill-row" id="skill-row1"></div>
+            <div class="skill-row" id="skill-row2"></div>
+            <div class="skill-row" id="skill-row3"></div>
+        </div>
+        <div class="button-container" visibility: hidden>
+            <button id="prev-button" onclick="navigateSkills(-1)">Previous</button>
+            <button id="next-button" onclick="navigateSkills(1)">Next</button>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
